@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>He Form</title>
+
+  
+  
+  <script>
+function validateform()
+{
+  var n=document.he.name.value;
+  var l=document.he.lname.value;
+  var p=document.he.pwd.value;
+  var a=document.he.address.value;
+  var c=document.he.pincode.value;
+  
+  if (n==null||n=="")
+  {
+	alert("Please Enter Your First Name");
+	document.he.name.focus();
+	return false;
+  }
+
+  if (l==null||l=="")
+  {
+	alert("Please Enter Your Last Name");
+	document.he.lname.focus();
+	return false;
+  }
+
+  if (p==null||p=="")
+  {
+	alert("Please Enter Your Password");
+	document.he.pwd.focus();
+	return false;
+  }
+
+  if (p.length<8)
+  {
+	alert("Enter Password with 8 Digits or More");
+	document.he.pwd.focus();
+	return false;
+  }
+if (a==null||a=="")
+{
+alert("Please Enter Your Address");
+document.he.address.focus();
+return false;
+}
+if (c==null||c=="")
+{
+alert("Please Enter Your Pincode");
+document.he.pincode.focus();
+return false;
+}
+if (c.length<6||c.length>6)
+{
+alert("Please Enter a Six Digit Pincode");
+document.he.pincode.focus();
+return false;
+}
+if ((document.he.gender[0].checked==false)&&(document.he.gender[1].checked==false))
+{
+alert("Please Select Your Gender");
+document.he.gender[0].focus();
+return false;
+}
+}
+  </script>
+  
+  <style type="text/css">
+h2 {
+  border-style: outset;
+  border-color: #ff6666;
+  font-family: Arial,Helvetica,sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+body {
+  font-family: Arial,Helvetica,sans-serif;
+  font-weight: inherit;
+}
+label {
+  font-family: cursive;
+}
+
+  </style>
+</head><body style="color: rgb(0, 0, 0); background-color: rgb(204, 255, 255);" alink="#000099" link="#000099" vlink="#990099">
+<form onsubmit="return validateform()" method="post" action="he.html" name="he">
+  <div style="text-align: center;"><span style="font-weight: bold;"></span></div>
+  <h2 style="text-align: center;">Register Here</h2>
+  <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <label>Firstname</label>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; <input size="30" name="name"><br>
+  <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <label>Last
+Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input size="30" name="lname"><br>
+  <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <label>Password</label>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <input size="30" name="pwd" type="password"><br>
+  <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <label>Gender</label>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <input name="gender" value="male" type="radio"> Male&nbsp;&nbsp;&nbsp; <input name="gender" value="female" type="radio"> Female<br>
+  <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <label>Hobby</label>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <input name="hobby" value="dancing" type="checkbox"> Dancing&nbsp;&nbsp;&nbsp; <input name="hobby" value="singing" type="checkbox"> Singing&nbsp;&nbsp;&nbsp; <input name="hobby" value="reading" type="checkbox">
+Reading&nbsp;&nbsp;&nbsp; <input name="hobby" value="drawing" type="checkbox"> Drawing<br>
+  <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <label>Address</label>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; <textarea cols="50" rows="7" name="address"></textarea><br>
+  <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <label>City</label>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+  <select name="city">
+  <option value="1">Select City!</option>
+  <option>Ahmedabad</option>
+  <option>Jamnagar</option>
+  <option>Junagadh</option>
+  <option>Rajkot</option>
+  <option>Surat</option>
+  <option>Vadodara</option>
+  <option>None Of These</option>
+  </select>
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+  <label>Pincode</label>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <input name="pincode"><br>
+  <br>
+  <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <input style="padding: 10px; font-size: 20px;" name="submit" value="SUBMIT" type="submit">&nbsp;&nbsp;
+&nbsp; &nbsp;&nbsp;
+&nbsp; <input style="padding: 10px; font-size: 20px;" name="reset" value="RESET" type="reset"><br>
+</form>
+
+</body></html>
