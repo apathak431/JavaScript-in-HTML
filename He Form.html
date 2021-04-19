@@ -6,68 +6,7 @@
 
   
   
-  <script>
-function validateform()
-{
-  var n=document.he.name.value;
-  var l=document.he.lname.value;
-  var p=document.he.pwd.value;
-  var a=document.he.address.value;
-  var c=document.he.pincode.value;
   
-  if (n==null||n=="")
-  {
-	alert("Please Enter Your First Name");
-	document.he.name.focus();
-	return false;
-  }
-
-  if (l==null||l=="")
-  {
-	alert("Please Enter Your Last Name");
-	document.he.lname.focus();
-	return false;
-  }
-
-  if (p==null||p=="")
-  {
-	alert("Please Enter Your Password");
-	document.he.pwd.focus();
-	return false;
-  }
-
-  if (p.length<8)
-  {
-	alert("Enter Password with 8 Digits or More");
-	document.he.pwd.focus();
-	return false;
-  }
-if (a==null||a=="")
-{
-alert("Please Enter Your Address");
-document.he.address.focus();
-return false;
-}
-if (c==null||c=="")
-{
-alert("Please Enter Your Pincode");
-document.he.pincode.focus();
-return false;
-}
-if (c.length<6||c.length>6)
-{
-alert("Please Enter a Six Digit Pincode");
-document.he.pincode.focus();
-return false;
-}
-if ((document.he.gender[0].checked==false)&&(document.he.gender[1].checked==false))
-{
-alert("Please Select Your Gender");
-document.he.gender[0].focus();
-return false;
-}
-}
-  </script>
   
   <style type="text/css">
 h2 {
@@ -140,5 +79,66 @@ Reading&nbsp;&nbsp;&nbsp; <input name="hobby" value="drawing" type="checkbox"> D
 &nbsp; &nbsp;&nbsp;
 &nbsp; <input style="padding: 10px; font-size: 20px;" name="reset" value="RESET" type="reset"><br>
 </form>
+<script>
+function validateform()
+{
+  var n=document.he.name.value;
+  var l=document.he.lname.value;
+  var p=document.he.pwd.value;
+  var a=document.he.address.value;
+  var c=document.he.pincode.value;
+  
+  if (n==null||n=="")
+  {
+	alert("Please Enter Your First Name");
+	document.he.name.focus();
+	return false;
+  }
 
+  if (l==null||l=="")
+  {
+	alert("Please Enter Your Last Name");
+	document.he.lname.focus();
+	return false;
+  }
+
+  if (p==null||p=="")
+  {
+	alert("Please Enter Your Password");
+	document.he.pwd.focus();
+	return false;
+  }
+
+  if (p.length<8)
+  {
+	alert("Enter Password with 8 Digits or More");
+	document.he.pwd.focus();
+	return false;
+  }
+if (a==null||a=="")
+{
+alert("Please Enter Your Address");
+document.he.address.focus();
+return false;
+}
+if (c==null||c=="")
+{
+alert("Please Enter Your Pincode");
+document.he.pincode.focus();
+return false;
+}
+if (c.length<6||c.length>6)
+{
+alert("Please Enter a Six Digit Pincode");
+document.he.pincode.focus();
+return false;
+}
+if ((document.he.gender[0].checked==false)&&(document.he.gender[1].checked==false))
+{
+alert("Please Select Your Gender");
+document.he.gender[0].focus();
+return false;
+}
+}
+  </script>
 </body></html>
